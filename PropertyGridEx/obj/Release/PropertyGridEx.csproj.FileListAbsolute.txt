@@ -1,0 +1,7 @@
+D:\PBEdit\PBEdit\PropertyGridEx\bin\Release\PropertyGridEx.dll
+D:\PBEdit\PBEdit\PropertyGridEx\bin\Release\PropertyGridEx.pdb
+D:\PBEdit\PBEdit\PropertyGridEx\obj\Release\ResolveAssemblyReference.cache
+D:\PBEdit\PBEdit\PropertyGridEx\obj\Release\PropertyGridEx.dll
+D:\PBEdit\PBEdit\PropertyGridEx\obj\Release\PropertyGridEx.pdb
+D:\PBEdit\PBEdit\PBEdit\bin\Release\PropertyGridEx.dll
+D:\PBEdit\PBEdit\PBEdit\bin\Release\PropertyGridEx.pdb

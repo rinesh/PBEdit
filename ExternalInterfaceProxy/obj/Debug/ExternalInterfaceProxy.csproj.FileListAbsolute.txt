@@ -1,0 +1,7 @@
+D:\PV3D\Programming_ActionScript3.0_samples\Samples\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\ExternalInterfaceProxy.dll
+D:\PV3D\Programming_ActionScript3.0_samples\Samples\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\ExternalInterfaceProxy.pdb
+D:\PV3D\Programming_ActionScript3.0_samples\Samples\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+D:\PV3D\Programming_ActionScript3.0_samples\Samples\IntrovertIM_CSharp\ExternalInterfaceProxy\bin\Debug\Interop.ShockwaveFlashObjects.dll
+D:\PV3D\Programming_ActionScript3.0_samples\Samples\IntrovertIM_CSharp\ExternalInterfaceProxy\obj\Debug\ResolveAssemblyReference.cache
+D:\PV3D\Programming_ActionScript3.0_samples\Samples\IntrovertIM_CSharp\ExternalInterfaceProxy\obj\Debug\ExternalInterfaceProxy.dll
+D:\PV3D\Programming_ActionScript3.0_samples\Samples\IntrovertIM_CSharp\ExternalInterfaceProxy\obj\Debug\ExternalInterfaceProxy.pdb

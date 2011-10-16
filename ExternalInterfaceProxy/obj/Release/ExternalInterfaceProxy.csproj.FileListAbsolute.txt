@@ -1,0 +1,5 @@
+D:\PBEdit\PBEdit\ExternalInterfaceProxy\bin\Release\ExternalInterfaceProxy.dll
+D:\PBEdit\PBEdit\ExternalInterfaceProxy\bin\Release\AxInterop.ShockwaveFlashObjects.dll
+D:\PBEdit\PBEdit\ExternalInterfaceProxy\bin\Release\Interop.ShockwaveFlashObjects.dll
+D:\PBEdit\PBEdit\ExternalInterfaceProxy\obj\Release\ResolveAssemblyReference.cache
+D:\PBEdit\PBEdit\ExternalInterfaceProxy\obj\Release\ExternalInterfaceProxy.dll

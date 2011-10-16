@@ -1,0 +1,645 @@
+﻿<thing>
+  <type name="com.pblabs.box2D::Box2DDebugComponent" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="com.pblabs.box2D::Box2DDebugComponent">
+      <extendsClass type="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <extendsClass type="com.pblabs.engine.components::AnimatedComponent"/>
+      <extendsClass type="com.pblabs.engine.entity::EntityComponent"/>
+      <extendsClass type="Object"/>
+      <implementsInterface type="com.pblabs.engine.core::IAnimatedObject"/>
+      <implementsInterface type="com.pblabs.engine.entity::IEntityComponent"/>
+      <accessor name="drawShapes" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="layerIndex" access="readwrite" type="int" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <method name="applyDebugFlags" declaredBy="com.pblabs.box2D::Box2DDebugComponent" returnType="void"/>
+      <accessor name="spatialManager" access="readwrite" type="com.pblabs.box2D::Box2DManagerComponent" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="drawAABB" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="drawJoints" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="drawPairs" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="manager" access="readwrite" type="com.pblabs.box2D::Box2DManagerComponent" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="drawCenterOfMass" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="drawCoreShapes" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <accessor name="drawOBB" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DDebugComponent"/>
+      <variable name="objectMask" type="com.pblabs.engine.core::ObjectType"/>
+      <accessor name="scale" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="registrationPoint" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="position" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="rotation" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="positionOffset" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="worldPosition" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="onFrame" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="void">
+        <parameter index="1" type="Number" optional="false"/>
+      </method>
+      <accessor name="localBounds" access="readonly" type="flash.geom::Rectangle" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="displayObject" access="readwrite" type="flash.display::DisplayObject" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="alpha" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="rotationOffset" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="y" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="x" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="sceneBounds" access="readonly" type="flash.geom::Rectangle" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="transformObjectToWorld" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="flash.geom::Point">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <accessor name="size" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <method name="transformWorldToObject" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="flash.geom::Point">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <accessor name="scene" access="readwrite" type="com.pblabs.rendering2D::IScene2D" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="updateTransform" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="void">
+        <parameter index="1" type="Boolean" optional="true"/>
+      </method>
+      <method name="pointOccupied" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+        <parameter index="2" type="com.pblabs.engine.core::ObjectType" optional="false"/>
+      </method>
+      <accessor name="renderPosition" access="readonly" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <variable name="renderKey" type="int"/>
+      <variable name="positionProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="snapToNearestPixels" type="Boolean"/>
+      <variable name="scaleProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="sizeProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="rotationProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="alphaProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="blendModeProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="layerIndexProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="zIndexProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <accessor name="zIndex" access="readwrite" type="int" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <variable name="registrationPointProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <accessor name="blendMode" access="readwrite" type="String" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <variable name="updatePriority" type="Number">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </variable>
+      <accessor name="registerForUpdates" access="readwrite" type="Boolean" declaredBy="com.pblabs.engine.components::AnimatedComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="unregister" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void"/>
+      <accessor name="name" access="readonly" type="String" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="owner" access="readwrite" type="com.pblabs.engine.entity::IEntity" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="isRegistered" access="readonly" type="Boolean" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="register" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void">
+        <parameter index="1" type="com.pblabs.engine.entity::IEntity" optional="false"/>
+        <parameter index="2" type="String" optional="false"/>
+      </method>
+      <method name="reset" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="com.pblabs.box2D::CircleCollisionShape" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="com.pblabs.box2D::CircleCollisionShape">
+      <extendsClass type="com.pblabs.box2D::CollisionShape"/>
+      <extendsClass type="Object"/>
+      <accessor name="radius" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CircleCollisionShape">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="1"/>
+        </metadata>
+      </accessor>
+      <accessor name="offset" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.box2D::CircleCollisionShape"/>
+      <method name="createShape" declaredBy="com.pblabs.box2D::CollisionShape" returnType="Box2D.Collision.Shapes::b2ShapeDef">
+        <parameter index="1" type="com.pblabs.box2D::Box2DSpatialComponent" optional="false"/>
+      </method>
+      <accessor name="density" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="1"/>
+        </metadata>
+      </accessor>
+      <accessor name="friction" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape"/>
+      <accessor name="restitution" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape"/>
+      <accessor name="isTrigger" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::CollisionShape"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="com.pblabs.box2D::Box2DSpatialComponent" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="com.pblabs.box2D::Box2DSpatialComponent">
+      <extendsClass type="com.pblabs.engine.entity::EntityComponent"/>
+      <extendsClass type="Object"/>
+      <implementsInterface type="com.pblabs.rendering2D::ISpatialObject2D"/>
+      <implementsInterface type="com.pblabs.rendering2D::IMobileSpatialObject2D"/>
+      <implementsInterface type="com.pblabs.engine.entity::IEntityComponent"/>
+      <accessor name="objectMask" access="readonly" type="com.pblabs.engine.core::ObjectType" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="worldExtents" access="readonly" type="flash.geom::Rectangle" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="canSleep" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DSpatialComponent">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="collidesContinuously" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="spatialManager" access="readwrite" type="com.pblabs.box2D::Box2DManagerComponent" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="collisionShapes" access="readwrite" type="Array" declaredBy="com.pblabs.box2D::Box2DSpatialComponent">
+        <metadata name="TypeHint">
+          <arg key="type" value="com.pblabs.box2D.CollisionShape"/>
+        </metadata>
+      </accessor>
+      <method name="buildCollisionShapes" declaredBy="com.pblabs.box2D::Box2DSpatialComponent" returnType="void"/>
+      <accessor name="manager" access="readwrite" type="com.pblabs.box2D::Box2DManagerComponent" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="body" access="readonly" type="Box2D.Dynamics::b2Body" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="collisionType" access="readwrite" type="com.pblabs.engine.core::ObjectType" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <method name="castRay" declaredBy="com.pblabs.box2D::Box2DSpatialComponent" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+        <parameter index="2" type="flash.geom::Point" optional="false"/>
+        <parameter index="3" type="com.pblabs.engine.core::ObjectType" optional="false"/>
+        <parameter index="4" type="com.pblabs.rendering2D::RayHitInfo" optional="false"/>
+      </method>
+      <accessor name="collidesWithTypes" access="readwrite" type="com.pblabs.engine.core::ObjectType" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="linearVelocity" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="position" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <method name="pointOccupied" declaredBy="com.pblabs.box2D::Box2DSpatialComponent" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+        <parameter index="2" type="com.pblabs.engine.core::ObjectType" optional="false"/>
+        <parameter index="3" type="com.pblabs.rendering2D::IScene2D" optional="false"/>
+      </method>
+      <accessor name="size" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.box2D::Box2DSpatialComponent">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="100|100"/>
+        </metadata>
+      </accessor>
+      <accessor name="angularVelocity" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <accessor name="rotation" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::Box2DSpatialComponent"/>
+      <method name="updateMass" declaredBy="com.pblabs.box2D::Box2DSpatialComponent" returnType="void"/>
+      <accessor name="canMove" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DSpatialComponent">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="canRotate" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::Box2DSpatialComponent">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="unregister" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void"/>
+      <accessor name="name" access="readonly" type="String" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="owner" access="readwrite" type="com.pblabs.engine.entity::IEntity" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="isRegistered" access="readonly" type="Boolean" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="register" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void">
+        <parameter index="1" type="com.pblabs.engine.entity::IEntity" optional="false"/>
+        <parameter index="2" type="String" optional="false"/>
+      </method>
+      <method name="reset" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="com.pblabs.box2D::CollisionShape" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="com.pblabs.box2D::CollisionShape">
+      <metadata name="EditorData">
+        <arg key="ignore" value="true"/>
+      </metadata>
+      <extendsClass type="Object"/>
+      <method name="createShape" declaredBy="com.pblabs.box2D::CollisionShape" returnType="Box2D.Collision.Shapes::b2ShapeDef">
+        <parameter index="1" type="com.pblabs.box2D::Box2DSpatialComponent" optional="false"/>
+      </method>
+      <accessor name="density" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="1"/>
+        </metadata>
+      </accessor>
+      <accessor name="friction" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape"/>
+      <accessor name="restitution" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape"/>
+      <accessor name="isTrigger" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::CollisionShape"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="flash.geom::Rectangle" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="flash.geom::Rectangle">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="Number" optional="true"/>
+        <parameter index="2" type="Number" optional="true"/>
+        <parameter index="3" type="Number" optional="true"/>
+        <parameter index="4" type="Number" optional="true"/>
+      </constructor>
+      <accessor name="top" access="readwrite" type="Number" declaredBy="flash.geom::Rectangle"/>
+      <accessor name="right" access="readwrite" type="Number" declaredBy="flash.geom::Rectangle"/>
+      <method name="intersection" declaredBy="flash.geom::Rectangle" returnType="flash.geom::Rectangle">
+        <parameter index="1" type="flash.geom::Rectangle" optional="false"/>
+      </method>
+      <method name="inflate" declaredBy="flash.geom::Rectangle" returnType="void">
+        <parameter index="1" type="Number" optional="false"/>
+        <parameter index="2" type="Number" optional="false"/>
+      </method>
+      <variable name="width" type="Number"/>
+      <method name="containsRect" declaredBy="flash.geom::Rectangle" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Rectangle" optional="false"/>
+      </method>
+      <accessor name="bottom" access="readwrite" type="Number" declaredBy="flash.geom::Rectangle"/>
+      <method name="isEmpty" declaredBy="flash.geom::Rectangle" returnType="Boolean"/>
+      <variable name="height" type="Number"/>
+      <accessor name="topLeft" access="readwrite" type="flash.geom::Point" declaredBy="flash.geom::Rectangle"/>
+      <method name="offset" declaredBy="flash.geom::Rectangle" returnType="void">
+        <parameter index="1" type="Number" optional="false"/>
+        <parameter index="2" type="Number" optional="false"/>
+      </method>
+      <method name="setEmpty" declaredBy="flash.geom::Rectangle" returnType="void"/>
+      <method name="equals" declaredBy="flash.geom::Rectangle" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Rectangle" optional="false"/>
+      </method>
+      <method name="clone" declaredBy="flash.geom::Rectangle" returnType="flash.geom::Rectangle"/>
+      <accessor name="bottomRight" access="readwrite" type="flash.geom::Point" declaredBy="flash.geom::Rectangle"/>
+      <method name="toString" declaredBy="flash.geom::Rectangle" returnType="String"/>
+      <variable name="y" type="Number"/>
+      <variable name="x" type="Number"/>
+      <method name="containsPoint" declaredBy="flash.geom::Rectangle" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <method name="offsetPoint" declaredBy="flash.geom::Rectangle" returnType="void">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <accessor name="size" access="readwrite" type="flash.geom::Point" declaredBy="flash.geom::Rectangle"/>
+      <accessor name="left" access="readwrite" type="Number" declaredBy="flash.geom::Rectangle"/>
+      <method name="inflatePoint" declaredBy="flash.geom::Rectangle" returnType="void">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <method name="intersects" declaredBy="flash.geom::Rectangle" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Rectangle" optional="false"/>
+      </method>
+      <method name="union" declaredBy="flash.geom::Rectangle" returnType="flash.geom::Rectangle">
+        <parameter index="1" type="flash.geom::Rectangle" optional="false"/>
+      </method>
+      <method name="contains" declaredBy="flash.geom::Rectangle" returnType="Boolean">
+        <parameter index="1" type="Number" optional="false"/>
+        <parameter index="2" type="Number" optional="false"/>
+      </method>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="flash.geom::Point" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <method name="interpolate" declaredBy="flash.geom::Point" returnType="flash.geom::Point">
+      <parameter index="1" type="flash.geom::Point" optional="false"/>
+      <parameter index="2" type="flash.geom::Point" optional="false"/>
+      <parameter index="3" type="Number" optional="false"/>
+    </method>
+    <method name="polar" declaredBy="flash.geom::Point" returnType="flash.geom::Point">
+      <parameter index="1" type="Number" optional="false"/>
+      <parameter index="2" type="Number" optional="false"/>
+    </method>
+    <method name="distance" declaredBy="flash.geom::Point" returnType="Number">
+      <parameter index="1" type="flash.geom::Point" optional="false"/>
+      <parameter index="2" type="flash.geom::Point" optional="false"/>
+    </method>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="flash.geom::Point">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="Number" optional="true"/>
+        <parameter index="2" type="Number" optional="true"/>
+      </constructor>
+      <method name="subtract" declaredBy="flash.geom::Point" returnType="flash.geom::Point">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <method name="clone" declaredBy="flash.geom::Point" returnType="flash.geom::Point"/>
+      <method name="normalize" declaredBy="flash.geom::Point" returnType="void">
+        <parameter index="1" type="Number" optional="false"/>
+      </method>
+      <method name="toString" declaredBy="flash.geom::Point" returnType="String"/>
+      <method name="equals" declaredBy="flash.geom::Point" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <method name="offset" declaredBy="flash.geom::Point" returnType="void">
+        <parameter index="1" type="Number" optional="false"/>
+        <parameter index="2" type="Number" optional="false"/>
+      </method>
+      <accessor name="length" access="readonly" type="Number" declaredBy="flash.geom::Point"/>
+      <variable name="y" type="Number"/>
+      <method name="add" declaredBy="flash.geom::Point" returnType="flash.geom::Point">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <variable name="x" type="Number"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="flash.utils::Dictionary" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="flash.utils::Dictionary">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="Boolean" optional="true"/>
+      </constructor>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="Number" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <constant name="NEGATIVE_INFINITY" type="Number"/>
+    <constant name="length" type="int"/>
+    <constant name="MAX_VALUE" type="Number"/>
+    <constant name="MIN_VALUE" type="Number"/>
+    <constant name="NaN" type="Number"/>
+    <constant name="POSITIVE_INFINITY" type="Number"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="Number">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="*" optional="true"/>
+      </constructor>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="uint" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <constant name="MIN_VALUE" type="uint"/>
+    <constant name="MAX_VALUE" type="uint"/>
+    <constant name="length" type="int"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="uint">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="*" optional="true"/>
+      </constructor>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="String" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <constant name="length" type="int"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="String">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="*" optional="true"/>
+      </constructor>
+      <accessor name="length" access="readonly" type="int" declaredBy="String"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="Boolean" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <constant name="length" type="int"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="Boolean">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="*" optional="true"/>
+      </constructor>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="int" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <constant name="MIN_VALUE" type="int"/>
+    <constant name="MAX_VALUE" type="int"/>
+    <constant name="length" type="int"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="int">
+      <extendsClass type="Object"/>
+      <constructor>
+        <parameter index="1" type="*" optional="true"/>
+      </constructor>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="Array" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <constant name="CASEINSENSITIVE" type="uint"/>
+    <constant name="DESCENDING" type="uint"/>
+    <constant name="UNIQUESORT" type="uint"/>
+    <constant name="length" type="int"/>
+    <constant name="NUMERIC" type="uint"/>
+    <constant name="RETURNINDEXEDARRAY" type="uint"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="Array">
+      <extendsClass type="Object"/>
+      <accessor name="length" access="readwrite" type="uint" declaredBy="Array"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="com.pblabs.box2D::PolygonCollisionShape" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="com.pblabs.box2D::PolygonCollisionShape">
+      <extendsClass type="com.pblabs.box2D::CollisionShape"/>
+      <extendsClass type="Object"/>
+      <accessor name="vertices" access="readwrite" type="Array" declaredBy="com.pblabs.box2D::PolygonCollisionShape">
+        <metadata name="TypeHint">
+          <arg key="type" value="flash.geom.Point"/>
+        </metadata>
+      </accessor>
+      <method name="createShape" declaredBy="com.pblabs.box2D::CollisionShape" returnType="Box2D.Collision.Shapes::b2ShapeDef">
+        <parameter index="1" type="com.pblabs.box2D::Box2DSpatialComponent" optional="false"/>
+      </method>
+      <accessor name="density" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape">
+        <metadata name="EditorData">
+          <arg key="defaultValue" value="1"/>
+        </metadata>
+      </accessor>
+      <accessor name="friction" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape"/>
+      <accessor name="restitution" access="readwrite" type="Number" declaredBy="com.pblabs.box2D::CollisionShape"/>
+      <accessor name="isTrigger" access="readwrite" type="Boolean" declaredBy="com.pblabs.box2D::CollisionShape"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+  <type name="com.pblabs.rendering2D::SimpleShapeRenderer" base="Class" isDynamic="true" isFinal="true" isStatic="true">
+    <extendsClass type="Class"/>
+    <extendsClass type="Object"/>
+    <accessor name="prototype" access="readonly" type="*" declaredBy="Class"/>
+    <factory type="com.pblabs.rendering2D::SimpleShapeRenderer">
+      <extendsClass type="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <extendsClass type="com.pblabs.engine.components::AnimatedComponent"/>
+      <extendsClass type="com.pblabs.engine.entity::EntityComponent"/>
+      <extendsClass type="Object"/>
+      <implementsInterface type="com.pblabs.engine.core::IAnimatedObject"/>
+      <implementsInterface type="com.pblabs.engine.entity::IEntityComponent"/>
+      <method name="redraw" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer" returnType="void"/>
+      <accessor name="isSquare" access="readwrite" type="Boolean" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <accessor name="isCircle" access="readwrite" type="Boolean" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <accessor name="radius" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <accessor name="fillColor" access="readwrite" type="uint" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <accessor name="lineColor" access="readwrite" type="uint" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <accessor name="fillAlpha" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <accessor name="lineAlpha" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <accessor name="lineSize" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::SimpleShapeRenderer"/>
+      <variable name="objectMask" type="com.pblabs.engine.core::ObjectType"/>
+      <accessor name="scale" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="registrationPoint" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="position" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="rotation" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="positionOffset" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="worldPosition" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="onFrame" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="void">
+        <parameter index="1" type="Number" optional="false"/>
+      </method>
+      <accessor name="localBounds" access="readonly" type="flash.geom::Rectangle" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="displayObject" access="readwrite" type="flash.display::DisplayObject" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="alpha" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="rotationOffset" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <accessor name="y" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="x" access="readwrite" type="Number" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="sceneBounds" access="readonly" type="flash.geom::Rectangle" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="transformObjectToWorld" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="flash.geom::Point">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <accessor name="size" access="readwrite" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <method name="transformWorldToObject" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="flash.geom::Point">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+      </method>
+      <accessor name="scene" access="readwrite" type="com.pblabs.rendering2D::IScene2D" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="updateTransform" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="void">
+        <parameter index="1" type="Boolean" optional="true"/>
+      </method>
+      <method name="pointOccupied" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer" returnType="Boolean">
+        <parameter index="1" type="flash.geom::Point" optional="false"/>
+        <parameter index="2" type="com.pblabs.engine.core::ObjectType" optional="false"/>
+      </method>
+      <accessor name="renderPosition" access="readonly" type="flash.geom::Point" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <variable name="renderKey" type="int"/>
+      <variable name="positionProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="snapToNearestPixels" type="Boolean"/>
+      <variable name="scaleProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="sizeProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="rotationProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="alphaProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="blendModeProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <variable name="layerIndexProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <accessor name="layerIndex" access="readwrite" type="int" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <variable name="zIndexProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <accessor name="zIndex" access="readwrite" type="int" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <variable name="registrationPointProperty" type="com.pblabs.engine.entity::PropertyReference"/>
+      <accessor name="blendMode" access="readwrite" type="String" declaredBy="com.pblabs.rendering2D::DisplayObjectRenderer"/>
+      <variable name="updatePriority" type="Number">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </variable>
+      <accessor name="registerForUpdates" access="readwrite" type="Boolean" declaredBy="com.pblabs.engine.components::AnimatedComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="unregister" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void"/>
+      <accessor name="name" access="readonly" type="String" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="owner" access="readwrite" type="com.pblabs.engine.entity::IEntity" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <accessor name="isRegistered" access="readonly" type="Boolean" declaredBy="com.pblabs.engine.entity::EntityComponent">
+        <metadata name="EditorData">
+          <arg key="ignore" value="true"/>
+        </metadata>
+      </accessor>
+      <method name="register" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void">
+        <parameter index="1" type="com.pblabs.engine.entity::IEntity" optional="false"/>
+        <parameter index="2" type="String" optional="false"/>
+      </method>
+      <method name="reset" declaredBy="com.pblabs.engine.entity::EntityComponent" returnType="void"/>
+    </factory>
+    <ignoreWhite>true</ignoreWhite>
+  </type>
+</thing>

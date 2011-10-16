@@ -1,0 +1,91 @@
+﻿<thing>
+  <entity name="Wall2">
+    <component type="com.pblabs.rendering2D.SimpleShapeRenderer" name="Renderer">
+      <fillColor>267390960</fillColor>
+      <lineSize>0.5</lineSize>
+      <lineColor>0</lineColor>
+      <radius>50</radius>
+      <fillAlpha>0.5</fillAlpha>
+      <lineAlpha>1</lineAlpha>
+      <isCircle>false</isCircle>
+      <isSquare>true</isSquare>
+      <position>
+        <y>-180</y>
+        <x>0</x>
+      </position>
+      <scale>
+        <y>1</y>
+        <x>1</x>
+      </scale>
+      <blendMode>normal</blendMode>
+      <rotation>0</rotation>
+      <positionOffset>
+        <y>0</y>
+        <x>0</x>
+      </positionOffset>
+      <rotationOffset>0</rotationOffset>
+      <zIndex>0</zIndex>
+      <registrationPoint>
+        <y>0</y>
+        <x>0</x>
+      </registrationPoint>
+      <alpha>1</alpha>
+      <size>
+        <y>50</y>
+        <x>500</x>
+      </size>
+      <layerIndex>0</layerIndex>
+      <sizeProperty>@Spatial.size</sizeProperty>
+      <renderKey>0</renderKey>
+      <snapToNearestPixels>true</snapToNearestPixels>
+      <positionProperty>@Spatial.position</positionProperty>
+      <rotationProperty>@Spatial.rotation</rotationProperty>
+    </component>
+    <component type="com.pblabs.box2D.Box2DSpatialComponent" name="Spatial">
+      <manager entityName="SceneDB" componentName="Spatial"/>
+      <canMove>false</canMove>
+      <spatialManager entityName="SceneDB" componentName="Spatial"/>
+      <canRotate>false</canRotate>
+      <collidesContinuously>false</collidesContinuously>
+      <linearVelocity>
+        <y>0</y>
+        <x>0</x>
+      </linearVelocity>
+      <collisionShapes childType="com.pblabs.box2D.PolygonCollisionShape">
+        <_>
+          <vertices childType="flash.geom.Point">
+            <_>
+              <y>-1</y>
+              <x>-1</x>
+            </_>
+            <_>
+              <y>-1</y>
+              <x>1</x>
+            </_>
+            <_>
+              <y>1</y>
+              <x>1</x>
+            </_>
+            <_>
+              <y>1</y>
+              <x>-1</x>
+            </_>
+          </vertices>
+          <restitution>0</restitution>
+          <isTrigger>false</isTrigger>
+          <friction>0</friction>
+        </_>
+      </collisionShapes>
+      <angularVelocity>0</angularVelocity>
+      <rotation>0</rotation>
+      <position>
+        <y>-180</y>
+        <x>0</x>
+      </position>
+      <size>
+        <y>50</y>
+        <x>500</x>
+      </size>
+    </component>
+  </entity>
+</thing>

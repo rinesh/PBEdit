@@ -1,0 +1,10 @@
+D:\PBEdit\POC\PropertyGridEx\PropertyGridEx\bin\Debug\PropertyGridEx.dll
+D:\PBEdit\POC\PropertyGridEx\PropertyGridEx\bin\Debug\PropertyGridEx.pdb
+D:\PBEdit\POC\PropertyGridEx\PropertyGridEx\obj\Debug\ResolveAssemblyReference.cache
+D:\PBEdit\POC\PropertyGridEx\PropertyGridEx\obj\Debug\PropertyGridEx.dll
+D:\PBEdit\POC\PropertyGridEx\PropertyGridEx\obj\Debug\PropertyGridEx.pdb
+D:\PBEdit\PBEdit\PropertyGridEx\bin\Debug\PropertyGridEx.dll
+D:\PBEdit\PBEdit\PropertyGridEx\bin\Debug\PropertyGridEx.pdb
+D:\PBEdit\PBEdit\PropertyGridEx\obj\Debug\ResolveAssemblyReference.cache
+D:\PBEdit\PBEdit\PropertyGridEx\obj\Debug\PropertyGridEx.dll
+D:\PBEdit\PBEdit\PropertyGridEx\obj\Debug\PropertyGridEx.pdb
