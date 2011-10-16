@@ -18,3 +18,8 @@ D:\PBEdit\PBEdit\PBEdit\obj\Debug\PBEdit.csproj.GenerateResource.Cache
 D:\PBEdit\PBEdit\PBEdit\obj\Debug\PBEdit.exe
 D:\PBEdit\PBEdit\PBEdit\obj\Debug\PBEdit.pdb
 D:\PBEdit\PBEdit\PBEdit\bin\Debug\PropertyGridEx.pdb
+C:\Documents and Settings\Rinesh\PBEdit\PBEdit\obj\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Documents and Settings\Rinesh\PBEdit\PBEdit\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Documents and Settings\Rinesh\PBEdit\PBEdit\obj\Debug\PBEdit.csproj.ResolveComReference.cache
+C:\Documents and Settings\Rinesh\PBEdit\PBEdit\obj\Debug\PBEdit.exe
+C:\Documents and Settings\Rinesh\PBEdit\PBEdit\obj\Debug\PBEdit.pdb
